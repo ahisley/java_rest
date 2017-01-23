@@ -14,7 +14,7 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 	<!-- Scanning for controllers to register with the web servlet -->
-	<context:component-scan base-package="io.github.ahisley.controller" />
+	<context:component-scan base-package="io.github.ahisley.controller;io.github.ahisley.swagger" />
 	
 	<mvc:annotation-driven>
 		<mvc:argument-resolvers>

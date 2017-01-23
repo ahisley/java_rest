@@ -13,7 +13,9 @@
 						http://www.springframework.org/schema/util 
 						http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<context:component-scan base-package="io.github.ahisley" />
+	<context:component-scan base-package="io.github.ahisley">
+		<context:exclude-filter type="annotation" expression="springfox.documentation.swagger2.annotations.EnableSwagger2"/>
+	</context:component-scan>
 
 	<!-- Using http request factory in order to guarantee reasonable defaults for max connections per route, etc -->
 	<bean id="connectionManager" class="org.apache.http.impl.conn.PoolingHttpClientConnectionManager">

@@ -5,6 +5,8 @@ import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
 
 public class HibernateAwareObjectMapper extends ObjectMapper{
 
+	private static final long serialVersionUID = 4914932245769948392L;
+
 	//Used to bootstrap better hibernate interactions for Jackson object mapper
 	public HibernateAwareObjectMapper() {
 		Hibernate4Module module = new Hibernate4Module();		
